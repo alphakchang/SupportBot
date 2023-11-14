@@ -9,7 +9,7 @@ import logo from './alpha_logo.png';
 
 const Navigation = () => {
     return (
-        <nav className="navbar navbar-expand-md fixed-top" id="top">
+        <nav className="navbar navbar-expand-md">
             <div className="container-fluid">
                     <a href="https://alphacrc.com/">
                         <span className="m-3">
@@ -17,21 +17,12 @@ const Navigation = () => {
                         </span>
                     </a>
                     <span className="fw-bold text-uppercase navbar-brand navTitle">
-                        Alpha Work Allocation Planner
+                        Alpha Support AI
                     </span>
 
                 {/* navbar links */}
                 <div className="collapse navbar-collapse justify-content-end align-center" id="main-nav">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a href="#myWorkload" className="nav-link">My Workload</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#myTasks" className="nav-link">My Tasks</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#teamWorkload" className="nav-link">Team Workload</a>
-                        </li>
                         <li className="nav-item">
                             <a href="http://naga.alphacrc.com:5214" className="nav-link">AI Playground</a>
                         </li>

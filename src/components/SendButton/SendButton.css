@@ -1,0 +1,29 @@
+button {
+    float: right;
+    margin-top: 5px;
+    font-size: 16px;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    background-color: #175676;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+}
+
+button:hover {
+    background-color: #5BA1C8;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #5BA1C8;
+    transform: translateY(2px);
+    transform: scale(0.95);
+}
+
+button:active {
+    transform: translateY(2px);
+    /* transform: scale(0.975); */
+}

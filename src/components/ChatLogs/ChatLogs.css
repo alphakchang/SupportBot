@@ -1,0 +1,38 @@
+#chatlogs {
+    height: 50vh;
+    width: 100%;
+    overflow: auto;
+    word-wrap: break-word;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start; /* default alignment */
+}
+
+#temp-response {
+    padding-left: 30px;
+    padding-right: 20px;
+    word-wrap: break-word;
+}
+
+.user {
+    margin-bottom: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    /* font-family: "Open Sans", Verdana; */
+    /* font-size: 16px; */
+    font-weight: bold;
+}
+
+.assistant {
+    margin-bottom: 3em;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    /* font-family: "Open Sans", Verdana; */
+    /* font-size: 16px; */
+
+}
