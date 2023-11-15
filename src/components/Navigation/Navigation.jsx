@@ -16,8 +16,8 @@ const Navigation = () => {
                             <img src={logo} height="50px" width="50px" alt='logo' />
                         </span>
                     </a>
-                    <span className="fw-bold text-uppercase navbar-brand navTitle">
-                        Alpha Support AI
+                    <span className="fw-bold text-uppercase text-secondary navbar-brand navTitle">
+                        Alphai
                     </span>
 
                 {/* navbar links */}

@@ -42,7 +42,7 @@ class ChatLogs extends Component {
         newMessageDiv.className = message.role;
     
         // Determine the label based on the role
-        const label = message.role === 'user' ? '  You' : '  AI Support';
+        const label = message.role === 'user' ? '  You' : '   Alphai';
         const content = this.convertNewlinesToBreaks(message.content);
     
         // Append the new div to chatLogs first

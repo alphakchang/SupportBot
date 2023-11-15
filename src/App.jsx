@@ -12,7 +12,7 @@ const initialState = {
   proxy: 'http://localhost:5001',
   userMessage: '',
   messages: [
-    { "role": "system", "content": "You are a helpful assistant" }
+    { "role": "system", "content": "Your name is Alphai, you are a helpful assistant" }
   ]
 }
 
