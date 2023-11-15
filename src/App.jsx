@@ -66,7 +66,7 @@ class App extends Component {
           <div className="row my-1">
             <ChatLogs proxy={this.state.proxy} messages={this.state.messages} onBotResponse={this.onBotResponse} ref={this.logRef} />
           </div>
-          <hr className='border-secondary border-2 opacity-50'/>
+          <hr className='border-secondary border-2 opacity-50' />
           <div className="row my-1">
             <div className="col-md-10 col-xxl-11">
               <MessageBox onUserMessageChange={this.onUserMessageChange} onSendButtonClicked={this.onSendButtonClicked} userMessage={this.state.userMessage} />
