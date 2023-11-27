@@ -7,9 +7,10 @@ import WaveAnimation from './components/WaveAnimation/WaveAnimation';
 import ChatLogs from './components/ChatLogs/ChatLogs';
 import MessageBox from './components/MessageBox/MessageBox';
 import SendButton from './components/SendButton/SendButton';
+import CopyChatHistory from './components/CopyChatHistory/CopyChatHistory';
 
 const initialState = {
-  proxy: 'http://localhost:5001',
+  proxy: 'https://naga.alphacrc.com:5001',
   userMessage: '',
   messages: [
     { "role": "system", "content": "Your name is Alphai, you are a helpful assistant" }
@@ -54,6 +55,19 @@ class App extends Component {
     });
   }
 
+  onCopyRequest = () => {
+    // Start from the 2nd message (index 1) instead of the first message (index 0)
+    let chatHistory = this.state.messages.slice(1).map((message, index) => {
+      // For every second message, add an extra newline character
+      let extraNewline = (index % 2 === 1) ? '\n' : '';
+      return `${message.role}:\n${message.content}${extraNewline}`;
+    }).join('\n');
+  
+    navigator.clipboard.writeText(chatHistory);
+  }
+  
+  
+
   render() {
     return (
       <div>
@@ -70,9 +84,10 @@ class App extends Component {
           <div className="row my-1">
             <div className="col-md-10 col-xxl-11">
               <MessageBox onUserMessageChange={this.onUserMessageChange} onSendButtonClicked={this.onSendButtonClicked} userMessage={this.state.userMessage} />
-            </div>
-            <div className="col-md-2 col-xxl-1 d-flex align-items-center justify-content-center">
               <SendButton onSendButtonClicked={this.onSendButtonClicked} />
+            </div>
+            <div className="col-md-2 col-xxl-1 d-flex align-items-start justify-content-center">
+              <CopyChatHistory onCopyRequest={this.onCopyRequest} />
             </div>
           </div>
         </div>

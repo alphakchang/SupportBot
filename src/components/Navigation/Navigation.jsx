@@ -24,7 +24,7 @@ const Navigation = () => {
                 <div className="collapse navbar-collapse justify-content-end align-center" id="main-nav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a href="http://naga.alphacrc.com:5214" className="nav-link">AI Playground</a>
+                            <a href="https://naga.alphacrc.com:5214" className="nav-link">AI Playground</a>
                         </li>
                     </ul>
                 </div>

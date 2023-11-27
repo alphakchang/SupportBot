@@ -67,7 +67,7 @@ class CallGPT extends Component {
             model: "gpt-4-1106-preview",
             messages: this.props.messages,
             stream: true,
-            temperature: 0.2
+            temperature: 0.1
         });
 
         
