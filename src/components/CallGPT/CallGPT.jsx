@@ -62,10 +62,12 @@ class CallGPT extends Component {
         await this.ensureOpenAIInitialized();
 
         const { openai } = this.state;
+        const messagesToProcess = this.props.messages.slice(-5); // send only the last five messages as context, saving money
 
         const completion = await openai.chat.completions.create({
             model: "gpt-4-1106-preview",
-            messages: this.props.messages,
+            // model: "gpt-3.5-turbo-1106",
+            messages: messagesToProcess,
             stream: true,
             temperature: 0.1
         });
@@ -83,7 +85,7 @@ class CallGPT extends Component {
 
     async runCall() {
         try {
-            // Await the callApi method. If it's an async operation, it should return a promise.
+            // Await the callApi method.
             await this.callApi();
             this.props.handleApiResponse(this.state.response);
 

@@ -39,6 +39,25 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Serve options
+
+### `serve from server` (this is my current way)
+
+Using express.static() to serve the static file, this is the code block inside the server
+
+```javascript
+const buildPathAlphai = path.join(__dirname, '../SupportAI/build');
+
+app.use('/alphai', (req, res, next) => {
+  console.log("<<< Alphai called >>>");
+  next();
+}, express.static(buildPathAlphai));
+
+app.get('/alphai/*', (req, res) => {
+	res.sendFile(path.join(buildPathAlphai, 'index.html'));
+});
+```
+
 ### `serve -s build -l ${port}`
 
 Once the build folder has been created, it contains everything required to be hosted.

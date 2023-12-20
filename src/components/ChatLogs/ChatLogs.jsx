@@ -23,18 +23,6 @@ class ChatLogs extends Component {
         return str.replace(/\n/g, '<br>');
     }
 
-    // displayMessage = (message) => {
-    //     const chatLogs = document.getElementById('chatlogs');
-    //     const newMessage = document.createElement('div');
-    //     newMessage.className = message.role;
-
-    //     // Check the role of the message and prepend the appropriate label
-    //     let label = message.role === 'user' ? 'You' : 'AI Support';
-    //     newMessage.innerHTML = `${label}:<br>${this.convertNewlinesToBreaks(message.content)}`;
-
-    //     // Prepend the new message so it appears at the bottom due to column-reverse
-    //     chatLogs.prepend(newMessage);
-    // }
 
     displayMessage = (message) => {
         const chatLogs = document.getElementById('chatlogs');
@@ -45,7 +33,8 @@ class ChatLogs extends Component {
         const label = message.role === 'user' ? '  You' : '   Alphai';
         const content = this.convertNewlinesToBreaks(message.content);
     
-        // Append the new div to chatLogs first
+        // Append the new div to chatLogs,
+        // prepend the new message so it appears at the bottom due to column-reverse
         chatLogs.prepend(newMessageDiv);
     
         // Then create a root for that div and render the component
